@@ -6,19 +6,27 @@ public enum ShipState { Idle, Prepare, Sail,Dead };
 
 public class Ship : MonoBehaviour
 {
+    public static Ship ship;
     Rigidbody2D rb;
     Vector3 start_position;
     public float maxRange = 2.0f;
     public float forceCoeff = 1.0f;
     Animator anim;
     ShipMove shipMove;
+    public int Price { get; set; }
     public ShipState State { get; set; }
+
+    void Awake()
+    {
+        ship = this;
+    }
 
     void Start ()
     {
         anim = GetComponentInChildren<Animator>();
         State = ShipState.Idle;
         rb = GetComponent<Rigidbody2D>();
+        Price = 200;
     }
 
     void OnTriggerEnter2D(Collider2D coll)

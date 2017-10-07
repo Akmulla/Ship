@@ -45,4 +45,13 @@ public class GameController : MonoBehaviour
         State = GameState.Game;
         //UIController.ui.UpdateUI();
     }
+
+    public void Finish(bool success,int price)
+    {
+        Spawn.spawn.SpawnShip();
+        if (success)
+        {
+            ScoreManager.sm.Score += price;
+        }
+    }
 }
