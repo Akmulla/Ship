@@ -46,7 +46,7 @@ public class GameController : MonoBehaviour
         //UIController.ui.UpdateUI();
     }
 
-    public void Finish(bool success,int price)
+    public void ShipReached(bool success,int price=0)
     {
         Spawn.spawn.SpawnShip();
         if (success)

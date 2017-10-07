@@ -36,6 +36,12 @@ public class Ship : MonoBehaviour
             State=ShipState.Dead;
             anim.SetTrigger("Destroy");
         }
+
+        if (coll.gameObject.CompareTag("Port"))
+        {
+            GameController.gc.ShipReached(true, Price);
+        }
+        Destroy(gameObject);
     }
     public void Move()
     {
@@ -127,5 +133,19 @@ public class Ship : MonoBehaviour
     {
         
          Move();
+        float offset = 2.5f;
+        Vector3 pos = transform.position;
+
+        if (pos.y > Edges.topEdge+offset)
+            transform.position = new Vector3(pos.x, Edges.botEdge - offset, pos.z);
+
+        if (pos.y < Edges.botEdge - offset)
+            transform.position = new Vector3(pos.x, Edges.topEdge+ offset, pos.z);
+
+        if (pos.x > Edges.rightEdge+ offset)
+            transform.position = new Vector3(Edges.leftEdge- offset, pos.y, pos.z);
+
+        if (pos.x < Edges.leftEdge- offset)
+            transform.position = new Vector3(Edges.rightEdge+ offset, pos.y, pos.z);
     }
 }
