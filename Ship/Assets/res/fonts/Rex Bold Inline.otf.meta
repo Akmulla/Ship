@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 78824413cf14eb34385ad6c9d5198afd
+timeCreated: 1507379698
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rex Bold Inline
+  fontNames:
+  - Rex Bold Inline
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

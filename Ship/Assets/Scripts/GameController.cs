@@ -7,19 +7,20 @@ public enum GameState { Game,Pause};
 public class GameController : MonoBehaviour
 {
     public static GameController gc;
-    float saved_time_scale = 1.0f;
+    float saved_time_scale;
     public GameState State { get; set; }
 	
     void Awake()
     {
         gc = GetComponent<GameController>();
-        State = GameState.Game;
+        saved_time_scale = 1.0f;
     }
 
 	void Start ()
     {
-		
-	}
+        State = GameState.Game;
+
+    }
 	
 	
 	void Update ()
