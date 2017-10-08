@@ -105,10 +105,10 @@ public class Ship : MonoBehaviour
             
         }
 
-        if (State == ShipState.Sail)
-        {
-            RotateToPoint((Vector2)transform.position + rb.velocity);
-        }
+        //if (State == ShipState.Sail)
+        //{
+        //    RotateToPoint((Vector2)transform.position + rb.velocity);
+        //}
 
         if (State == ShipState.Dead)
         {
@@ -137,75 +137,89 @@ public class Ship : MonoBehaviour
         transform.eulerAngles = new Vector3(0f, 0f,
             transform.position.y < point.y ? angle + 180.0f : -angle + 180.0f);
     }
-
+    void FixedUpdate()
+    {
+        if (State == ShipState.Sail)
+        {
+            RotateToPoint((Vector2)transform.position + rb.velocity);
+        }
+    }
+    
     void Update()
     {
         Move();
         float offset = 2.5f;
         Vector3 pos = transform.position;
 
+        float x0 = transform.position.x;
+        float y0 = transform.position.y;
+        float x=0;
+        float y = Edges.botEdge;
 
-        //if ((pos.y > Edges.topEdge + offset) || (pos.y < Edges.botEdge - offset)
-        //    || (pos.x > Edges.rightEdge + offset) || (pos.x < Edges.leftEdge - offset))
+        //if ((pos.y > Edges.topEdge) || (pos.y < Edges.botEdge)
+        //    || (pos.x > Edges.rightEdge) || (pos.x < Edges.leftEdge))
         //{
-        //    if (pos.y > Edges.topEdge + offset)
-        //    {
-        //        float AB = transform.position.y;
-        //        float AC=
-        //    }
+        //    x0 = transform.position.x;
+        //    y0 = transform.position.y;
+            
+        //    y = Edges.botEdge;
+        //    x = ((y - y0) / rb.velocity.y) * rb.velocity.x+x0;
+        //    transform.position= new Vector2(x, y);
         //}
 
 
-        //if ( (pos.y > Edges.topEdge + offset)||( pos.y < Edges.botEdge - offset)
-        //    || (pos.x > Edges.rightEdge + offset)|| (pos.x < Edges.leftEdge - offset) )
-        //{
+        if (pos.y > Edges.topEdge+offset)
+        {
+            x0 = transform.position.x;
+            y0 = transform.position.y;
 
-        //Vector2 v;
-        //Vector2 res;
-        //float k;
-        //float newY;
-        //if (pos.y > Edges.topEdge + offset+1.0f)
-        //{
-        //    newY = Mathf.Abs((Edges.topEdge + offset) - (Edges.botEdge - offset));
-        //    v = rb.velocity;
-        //    //k = v.y / v.x;
-        //    k = v.y / v.x;
-        //    //res = new Vector2(v.x - k * v.x, v.y - v.y);
-        //    res = new Vector2(v.x - k * v.x, v.y - newY);
+            y = Edges.botEdge- offset;
+            x = ((y - y0) / rb.velocity.y) * rb.velocity.x + x0;
+            transform.position = new Vector2(x, y);
+        }
 
-        //    transform.position = res;
-        //}
+        if (pos.y < Edges.botEdge- offset)
 
-        //if (pos.y < Edges.botEdge - offset-1.0f)
-        //{
-        //    newY = Mathf.Abs((Edges.topEdge + offset) - (Edges.botEdge - offset));
-        //    v = rb.velocity;
-        //    //k = v.y / v.x;
-        //    k = v.y / v.x;
-        //    //res = new Vector2(v.x - k * v.x, v.y - v.y);
-        //    res = new Vector2(v.x - k * v.x, v.y + newY);
+        {
+            x0 = transform.position.x;
+            y0 = transform.position.y;
 
-        //    transform.position = res;
-        //}
+            y = Edges.topEdge+ offset;
+            x = ((y - y0) / rb.velocity.y) * rb.velocity.x + x0;
+            transform.position = new Vector2(x, y);
+        }
 
-        //}
-        //Vector2 v = rb.velocity;
-        //float k = v.y / v.x;
+        if (pos.x > Edges.rightEdge+ offset)
+        {
+            x0 = transform.position.x;
+            y0 = transform.position.y;
 
-        //Vector2 res = new Vector2(v.x - k * v.y, v.y - v.y);
-        //print(res);
-        //Debug.DrawLine(Vector2.zero, res,Color.red,0.1f);
-        if (pos.y > Edges.topEdge + offset)
-            transform.position = new Vector3(pos.x, Edges.botEdge - offset, pos.z);
+            x = Edges.leftEdge- offset;
+            y = ((x - x0) / rb.velocity.x) * rb.velocity.y + y0;
+            transform.position = new Vector2(x, y);
+        }
 
-        if (pos.y < Edges.botEdge - offset)
-            transform.position = new Vector3(pos.x, Edges.topEdge + offset, pos.z);
+        if (pos.x < Edges.leftEdge- offset)
+        {
+            x0 = transform.position.x;
+            y0 = transform.position.y;
 
-        if (pos.x > Edges.rightEdge + offset)
-            transform.position = new Vector3(Edges.leftEdge - offset, pos.y, pos.z);
+            x = Edges.rightEdge+ offset;
+            y = ((x - x0) / rb.velocity.x) * rb.velocity.y + y0;
+            transform.position = new Vector2(x, y);
+        }
 
-        if (pos.x < Edges.leftEdge - offset)
-            transform.position = new Vector3(Edges.rightEdge + offset, pos.y, pos.z);
+        //if (pos.y > Edges.topEdge + offset)
+        //    transform.position = new Vector3(pos.x, Edges.botEdge - offset, pos.z);
+
+        //if (pos.y < Edges.botEdge - offset)
+        //    transform.position = new Vector3(pos.x, Edges.topEdge + offset, pos.z);
+
+        //if (pos.x > Edges.rightEdge + offset)
+        //    transform.position = new Vector3(Edges.leftEdge - offset, pos.y, pos.z);
+
+        //if (pos.x < Edges.leftEdge - offset)
+        //    transform.position = new Vector3(Edges.rightEdge + offset, pos.y, pos.z);
 
 
     }
