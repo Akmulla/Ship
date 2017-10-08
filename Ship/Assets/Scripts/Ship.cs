@@ -43,6 +43,7 @@ public class Ship : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
     public void Move()
     {
         if (GameController.gc.State != GameState.Game)
@@ -129,10 +130,10 @@ public class Ship : MonoBehaviour
         transform.eulerAngles = new Vector3(0f, 0f,
             transform.position.y < point.y ? angle + 180.0f : -angle + 180.0f);
     }
+
     void Update()
     {
-        
-         Move();
+        Move();
         float offset = 2.5f;
         Vector3 pos = transform.position;
 
