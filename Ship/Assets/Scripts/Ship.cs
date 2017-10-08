@@ -35,13 +35,15 @@ public class Ship : MonoBehaviour
         {
             State=ShipState.Dead;
             anim.SetTrigger("Destroy");
+            Destroy(gameObject);
         }
 
         if (coll.gameObject.CompareTag("Port"))
         {
             GameController.gc.ShipReached(true, Price);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 
     public void Move()
