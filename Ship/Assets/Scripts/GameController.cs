@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { Game,Pause};
+public enum GameState { Game,Pause,Dialog};
 
 public class GameController : MonoBehaviour
 {
