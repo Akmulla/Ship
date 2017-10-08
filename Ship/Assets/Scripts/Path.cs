@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class Path : MonoBehaviour
 {
-    public Transform[] points;
-    public Vector2[] path;
-    int step = 0;
+    public Transform[] pointObjs;
+    [HideInInspector]
+    public Vector2[] points;
+    
 
     void Start()
     {
-        path = new Vector2[points.Length];
-        for (int i=0;i<points.Length;i++)
+        points = new Vector2[pointObjs.Length];
+        for (int i=0;i<pointObjs.Length;i++)
         {
-            path[i] = points[i].position;
+            points[i] = pointObjs[i].position;
         }
     }
 
-    void FixedUpdate()
-    {
 
-    }
 }
