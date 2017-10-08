@@ -15,6 +15,7 @@ public class Ship : MonoBehaviour
     ShipMove shipMove;
     public int Price { get; set; }
     public ShipState State { get; set; }
+    public LayerMask mask;
 
     void Awake()
     {
@@ -70,6 +71,7 @@ public class Ship : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Ship"))
                 {
                     State = ShipState.Prepare;
+                    rb.bodyType = RigidbodyType2D.Kinematic;
                 }
 
             }
@@ -82,10 +84,12 @@ public class Ship : MonoBehaviour
             if ((mousePosition - start_position).magnitude < maxRange)
             {
                 transform.position = mousePosition;
+                
             }
             else
             {
                 transform.position = (mousePosition - start_position).normalized * maxRange;
+                
             }
 
 
@@ -93,11 +97,12 @@ public class Ship : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && (State == ShipState.Prepare))
         {
+            rb.bodyType = RigidbodyType2D.Dynamic;
             // rb.simulated = true;
             rb.gravityScale = 1.0f;
             rb.AddForce((start_position - transform.position) * forceCoeff, ForceMode2D.Impulse);
             State = ShipState.Sail;
-
+            
         }
 
         if (State == ShipState.Sail)
@@ -139,16 +144,69 @@ public class Ship : MonoBehaviour
         float offset = 2.5f;
         Vector3 pos = transform.position;
 
-        if (pos.y > Edges.topEdge+offset)
+
+        //if ((pos.y > Edges.topEdge + offset) || (pos.y < Edges.botEdge - offset)
+        //    || (pos.x > Edges.rightEdge + offset) || (pos.x < Edges.leftEdge - offset))
+        //{
+        //    if (pos.y > Edges.topEdge + offset)
+        //    {
+        //        float AB = transform.position.y;
+        //        float AC=
+        //    }
+        //}
+
+
+        //if ( (pos.y > Edges.topEdge + offset)||( pos.y < Edges.botEdge - offset)
+        //    || (pos.x > Edges.rightEdge + offset)|| (pos.x < Edges.leftEdge - offset) )
+        //{
+
+        //Vector2 v;
+        //Vector2 res;
+        //float k;
+        //float newY;
+        //if (pos.y > Edges.topEdge + offset+1.0f)
+        //{
+        //    newY = Mathf.Abs((Edges.topEdge + offset) - (Edges.botEdge - offset));
+        //    v = rb.velocity;
+        //    //k = v.y / v.x;
+        //    k = v.y / v.x;
+        //    //res = new Vector2(v.x - k * v.x, v.y - v.y);
+        //    res = new Vector2(v.x - k * v.x, v.y - newY);
+
+        //    transform.position = res;
+        //}
+
+        //if (pos.y < Edges.botEdge - offset-1.0f)
+        //{
+        //    newY = Mathf.Abs((Edges.topEdge + offset) - (Edges.botEdge - offset));
+        //    v = rb.velocity;
+        //    //k = v.y / v.x;
+        //    k = v.y / v.x;
+        //    //res = new Vector2(v.x - k * v.x, v.y - v.y);
+        //    res = new Vector2(v.x - k * v.x, v.y + newY);
+
+        //    transform.position = res;
+        //}
+
+        //}
+        //Vector2 v = rb.velocity;
+        //float k = v.y / v.x;
+
+        //Vector2 res = new Vector2(v.x - k * v.y, v.y - v.y);
+        //print(res);
+        //Debug.DrawLine(Vector2.zero, res,Color.red,0.1f);
+        if (pos.y > Edges.topEdge + offset)
             transform.position = new Vector3(pos.x, Edges.botEdge - offset, pos.z);
 
         if (pos.y < Edges.botEdge - offset)
-            transform.position = new Vector3(pos.x, Edges.topEdge+ offset, pos.z);
+            transform.position = new Vector3(pos.x, Edges.topEdge + offset, pos.z);
 
-        if (pos.x > Edges.rightEdge+ offset)
-            transform.position = new Vector3(Edges.leftEdge- offset, pos.y, pos.z);
+        if (pos.x > Edges.rightEdge + offset)
+            transform.position = new Vector3(Edges.leftEdge - offset, pos.y, pos.z);
 
-        if (pos.x < Edges.leftEdge- offset)
-            transform.position = new Vector3(Edges.rightEdge+ offset, pos.y, pos.z);
+        if (pos.x < Edges.leftEdge - offset)
+            transform.position = new Vector3(Edges.rightEdge + offset, pos.y, pos.z);
+
+
     }
 }
