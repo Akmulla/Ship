@@ -53,6 +53,14 @@ public class Ship : MonoBehaviour
         
     }
 
+
+    IEnumerator DestroyDelay()
+    {
+        yield return new WaitForSeconds(5.0f);
+        anim.SetTrigger("Destroy");
+        State = ShipState.Dead;
+    }
+
     public void Move()
     {
         if (GameController.gc.State != GameState.Game)
@@ -108,6 +116,7 @@ public class Ship : MonoBehaviour
             rb.gravityScale = 1.0f;
             rb.AddForce((start_position - transform.position) * forceCoeff, ForceMode2D.Impulse);
             State = ShipState.Sail;
+            StartCoroutine(DestroyDelay());
             
         }
 
