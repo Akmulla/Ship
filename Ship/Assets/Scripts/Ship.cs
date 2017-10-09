@@ -13,13 +13,26 @@ public class Ship : MonoBehaviour
     public float forceCoeff = 1.0f;
     Animator anim;
     //ShipMove shipMove;
-    public int Price { get; set; }
+    int price;
     public ShipState State { get; set; }
+ 
     //public LayerMask mask;
 
     void Awake()
     {
         ship = this;
+        
+    }
+
+    public int Price {
+        get
+        {
+            return 200 + ScoreManager.sm.GetSausage() * 50;
+        }
+        set
+        {
+            price = value;
+        }
     }
 
     void Start ()
@@ -28,7 +41,8 @@ public class Ship : MonoBehaviour
         State = ShipState.Idle;
         rb = GetComponent<Rigidbody2D>();
         start_position = transform.position;
-        Price = 200;
+        ScoreManager.sm.ResetSausage();
+        //Price = 200;
     }
 
     void OnTriggerEnter2D(Collider2D coll)
