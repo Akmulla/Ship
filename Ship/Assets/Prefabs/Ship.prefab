@@ -176,9 +176,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxRange: 2
   forceCoeff: 7
+  length: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
+  boundary:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!212 &212460928170445516
 SpriteRenderer:
   m_ObjectHideFlags: 1

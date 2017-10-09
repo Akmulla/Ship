@@ -122,7 +122,7 @@ public class GameController : MonoBehaviour
     public void NextLvl()
     {
         Lvl++;
-
+        Edges.edges.CalcEdges();
         StartCoroutine(changeLvl());
     }
   IEnumerator changeLvl()
