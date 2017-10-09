@@ -115,6 +115,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114085308344576496, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: dialogData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224965791425628484, guid: 02365c73b9d586d4494ca225aae26304,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -228,10 +233,32 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114085308344576496, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: dialogData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 759a01ae52b1c2b499ec4e87e34fe631,
+        type: 2}
+    - target: {fileID: 114085308344576496, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: captain
+      value: 
+      objectReference: {fileID: 467841880}
+    - target: {fileID: 114085308344576496, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: onion
+      value: 
+      objectReference: {fileID: 2054264041}
     m_RemovedComponents:
     - {fileID: 114139987063825318, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &241837706 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114030457472400306, guid: 02365c73b9d586d4494ca225aae26304,
+    type: 2}
+  m_PrefabInternal: {fileID: 241837705}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &255293475
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +486,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6933e54f376f604cbe954fcf75ff692, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &467841880 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1786799015207080, guid: 02365c73b9d586d4494ca225aae26304,
+    type: 2}
+  m_PrefabInternal: {fileID: 241837705}
 --- !u!1 &740340474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1191,11 @@ MonoBehaviour:
   cursorDefault: {fileID: 2800000, guid: 4efcc7fbab031f4468a22aff4c2e27d1, type: 3}
   cursorPressed: {fileID: 2800000, guid: a6ec5ab5d68354d40add95e744368423, type: 3}
   offset: {x: 0.1, y: 0}
+--- !u!1 &2054264041 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1689988572257158, guid: 02365c73b9d586d4494ca225aae26304,
+    type: 2}
+  m_PrefabInternal: {fileID: 241837705}
 --- !u!1 &2114449657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,4 +1242,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 913692928}
   sausageText: {fileID: 1510925147}
+  lvlText: {fileID: 241837706}
   startScore: 1500

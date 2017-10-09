@@ -8,12 +8,16 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager sm;
     public Text text;
     public Text sausageText;
-    public Text shipText;
-    public int Ships { get; set; }
+    public Text lvlText;
+    
     public int startScore;
     int score;
     int sausage=0;
     
+    public void UpdateLvlText(int lvl)
+    {
+        lvlText.text = lvl.ToString();
+    }
     public void AddSausage()
     {
         if ((Ship.ship != null) && (sausage < 5) && (Score >= 10)&&(Ship.ship.State==ShipState.Idle))

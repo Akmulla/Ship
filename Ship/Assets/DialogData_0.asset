@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Name: DialogData_0
   m_EditorClassIdentifier: 
   lines:
-  - Hellow
-  - World!
+  - captainActive: 1
+    onionActive: 0
+    line: Hello
+  - captainActive: 0
+    onionActive: 1
+    line: World

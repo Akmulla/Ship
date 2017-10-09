@@ -2,28 +2,53 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { Game,Pause,Dialog};
+public enum GameState { Game,Dialog};
 
 public class GameController : MonoBehaviour
 {
     public static GameController gc;
     float saved_time_scale;
     public GameState State { get; set; }
-    public int Lvl { get; set; }
-    
-	
+    int lvl;
+    // public DialogData[] dialogData;
+    bool delay=false;
+
+    IEnumerator DelayInput()
+    {
+        delay = true;
+        yield return new WaitForSeconds(0.5f);
+        delay = false;
+    }
+    public int Lvl
+    {
+        get
+        {
+            return lvl;
+        }
+        set
+        {
+            lvl = value;
+            ScoreManager.sm.UpdateLvlText(lvl);
+        }
+    }
+
+
     void Awake()
     {
         gc = GetComponent<GameController>();
         saved_time_scale = 1.0f;
-        Lvl = 0;
+        
        
     }
 
 	void Start ()
     {
-        State = GameState.Game;
+        // State = GameState.Game;
+        State = GameState.Dialog;
+        Lvl = 0;
+        UIManager.ui.UpdateUI(State);
         Spawn.spawn.SpawnShip();
+        
     }
 	
 	
@@ -33,20 +58,40 @@ public class GameController : MonoBehaviour
         {
             Application.Quit();
         }
+
+        switch (State)
+        {
+            case GameState.Game:
+
+                break;
+
+            case GameState.Dialog:
+                if ((!delay)&&(Input.GetKey(KeyCode.Space)))
+                {
+                    StartCoroutine(DelayInput());
+                    if (UIManager.ui.NextLine())
+                    {
+                        State = GameState.Game;
+                        UIManager.ui.UpdateUI(State);
+                    }
+                }
+                
+                break;
+        }
     }
 
     public void Pause()
     {
         saved_time_scale = Time.timeScale;
         Time.timeScale = 0.0f;
-        State = GameState.Pause;
+        //State = GameState.Pause;
         //UIController.ui.UpdateUI();
     }
 
     public void UnPause()
     {
         Time.timeScale = saved_time_scale;
-        State = GameState.Game;
+        //State = GameState.Game;
         //UIController.ui.UpdateUI();
     }
 
@@ -59,6 +104,9 @@ public class GameController : MonoBehaviour
         }
         
     }
-
+    public void NextLvl()
+    {
+        Lvl++;
+    }
   
 }

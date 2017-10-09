@@ -10,8 +10,11 @@ public class UIManager : MonoBehaviour
     public Text dialogText;
     public DialogData[] dialogData;
     int curLine;
-	
-	void Awake ()
+    public GameObject captain;
+    public GameObject onion;
+    DialogData data;
+
+    void Awake ()
     {
         ui = this;
         curLine = 0;
@@ -27,16 +30,34 @@ public class UIManager : MonoBehaviour
             case GameState.Dialog:
                 dialogMenu.SetActive(true);
                 curLine = 0;
+                data = dialogData[GameController.gc.Lvl];
+                UpdateLine();
                 break;
         }
     }
-
-    public void NextLine()
+    //returns true if last line
+    public bool NextLine()
     {
         if (GameController.gc.State != GameState.Dialog)
-            return;
+            return true;
         curLine++;
-        dialogText.text = dialogData[GameController.gc.Lvl].lines[curLine];
+        if (curLine == dialogData[GameController.gc.Lvl].lines.Length )
+        {
+            
+            return true;
+        }
+        else
+        {
+            UpdateLine();
+            return false;
+        }
+            
+    }
+    void UpdateLine()
+    {
+        dialogText.text = data.lines[curLine].line;
+        captain.SetActive(data.lines[curLine].captainActive);
+        onion.SetActive(data.lines[curLine].onionActive);
     }
 
     void Update()
