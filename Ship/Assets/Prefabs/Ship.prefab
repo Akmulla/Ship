@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212460928170445516}
   - component: {fileID: 95269952880262384}
   - component: {fileID: 114359260274639858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 61250035883252078}
   - component: {fileID: 114641417276776916}
   - component: {fileID: 70545733349955238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ship
   m_TagString: Ship
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 1
-  m_SleepingMode: 2
+  m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &61250035883252078
@@ -178,7 +178,7 @@ MonoBehaviour:
   forceCoeff: 7
   mask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
 --- !u!212 &212460928170445516
 SpriteRenderer:
   m_ObjectHideFlags: 1

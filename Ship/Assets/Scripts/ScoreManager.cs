@@ -46,6 +46,10 @@ public class ScoreManager : MonoBehaviour
         }
         set
         {
+            if (value<0)
+            {
+
+            }
             score = value;
             text.text = score.ToString();
         }

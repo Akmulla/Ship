@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     {
         ui = this;
         curLine = 0;
+        DontDestroyOnLoad(gameObject);
     }
 	
     public void UpdateUI(GameState state)

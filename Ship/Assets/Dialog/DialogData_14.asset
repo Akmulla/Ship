@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610d5c307c29acc4189017a880d2d38e, type: 3}
+  m_Name: DialogData_14
+  m_EditorClassIdentifier: 
+  lines:
+  - captainActive: 0
+    onionActive: 1
+    line: You know what? Finish it. Everyone died from your meat anyway. I am all
+      alone on this island
+  - captainActive: 1
+    onionActive: 0
+    line: Woops . Who would expect that?
+  - captainActive: 0
+    onionActive: 1
+    line: I !! I WARNED YOU IDIOT!
+  - captainActive: 1
+    onionActive: 0
+    line: Warned me? I just wanted the money. I don`t care about meat anyway. I am
+      vegan too.

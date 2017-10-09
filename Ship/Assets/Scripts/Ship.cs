@@ -13,10 +13,11 @@ public class Ship : MonoBehaviour
     public float forceCoeff = 1.0f;
     Animator anim;
     //ShipMove shipMove;
+
     int price;
     public ShipState State { get; set; }
  
-    //public LayerMask mask;
+    public LayerMask mask;
 
     void Awake()
     {
@@ -77,12 +78,14 @@ public class Ship : MonoBehaviour
 
     public void Move()
     {
+
         if (GameController.gc.State != GameState.Game)
             return;
 
         Vector3 mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         mousePosition.z = 0.0f;
+        //print(mousePosition);
         if ((State == ShipState.Idle))
         {
             // rb.simulated = false;
@@ -91,9 +94,9 @@ public class Ship : MonoBehaviour
         if ((Input.GetMouseButtonDown(0)) && (State == ShipState.Idle))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction,20.0f,mask);
 
-            // print(hit.collider);
+             print(hit.collider);
             if (hit.collider != null)
             {
                 if (hit.collider.gameObject.CompareTag("Ship"))

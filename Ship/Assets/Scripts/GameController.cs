@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState { Game,Dialog};
 
@@ -37,6 +38,7 @@ public class GameController : MonoBehaviour
     {
         gc = GetComponent<GameController>();
         saved_time_scale = 1.0f;
+        DontDestroyOnLoad(gameObject);
         
        
     }
@@ -62,11 +64,16 @@ public class GameController : MonoBehaviour
         switch (State)
         {
             case GameState.Game:
-
+                ///////////////
+                if (Input.GetKeyDown(KeyCode.End))
+                {
+                    NextLvl();
+                }
+                /////////////////
                 break;
 
             case GameState.Dialog:
-                if ((!delay)&&(Input.GetKey(KeyCode.Space)))
+                if ((!delay)&&(Input.GetKeyDown(KeyCode.Space)))
                 {
                     StartCoroutine(DelayInput());
                     if (UIManager.ui.NextLine())
@@ -75,6 +82,8 @@ public class GameController : MonoBehaviour
                         UIManager.ui.UpdateUI(State);
                     }
                 }
+
+
                 
                 break;
         }
@@ -97,16 +106,34 @@ public class GameController : MonoBehaviour
 
     public void ShipReached(bool success,int price=0)
     {
-        Spawn.spawn.SpawnShip();
+        
         if (success)
         {
             ScoreManager.sm.Score += price;
+            NextLvl();
+        }
+        else
+        {
+            ScoreManager.sm.Score -= 200;
+            Spawn.spawn.SpawnShip();
         }
         
     }
     public void NextLvl()
     {
         Lvl++;
+
+        StartCoroutine(changeLvl());
     }
-  
+  IEnumerator changeLvl()
+    {
+        AsyncOperation load= SceneManager.LoadSceneAsync("Lvl_" + Lvl.ToString());
+        while (!load.isDone)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        State = GameState.Dialog;
+        UIManager.ui.UpdateUI(State);
+        Spawn.spawn.SpawnShip();
+    }
 }
