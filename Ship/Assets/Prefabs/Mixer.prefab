@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 58522328948837632}
   - component: {fileID: 50270773989231624}
   - component: {fileID: 250878988825490896}
+  - component: {fileID: 114271342258517256}
   m_Layer: 0
   m_Name: Mixer
   m_TagString: Untagged
@@ -184,6 +185,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114271342258517256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1812236586881300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423ce7a663afd7f4b9b91ea1eeedaad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grad: 50
 --- !u!114 &114887032949522942
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -641,6 +641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1977934936}
+  sausageText: {fileID: 0}
+  lvlText: {fileID: 0}
   startScore: 1500
 --- !u!1 &388579029
 GameObject:
@@ -1095,6 +1097,8 @@ MonoBehaviour:
   dialogMenu: {fileID: 854738625}
   dialogText: {fileID: 1518603411}
   dialogData: []
+  captain: {fileID: 0}
+  onion: {fileID: 0}
 --- !u!1 &560087256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,6 +3901,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3355a4f3983bf1b48bd78323f05cb268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftEdge: 0
+  rightEdge: 0
+  botEdge: 0
+  topEdge: 0
   leftImg: {fileID: 1142665611}
 --- !u!1 &1878859888
 GameObject:
@@ -4015,6 +4023,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1986417874}
+  sausageText: {fileID: 0}
+  lvlText: {fileID: 0}
   startScore: 1500
 --- !u!1 &1937650430
 GameObject:
