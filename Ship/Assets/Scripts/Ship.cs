@@ -67,15 +67,15 @@ public class Ship : MonoBehaviour
             GameController.gc.ShipReached(true, Price);
             Destroy(gameObject);
         }
-        if (coll.gameObject.CompareTag("Boundary"))
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.right, 100.0f, boundary);
-            //print(hit.collider);
-            if (hit.collider != null)
-            {
-                transform.position = hit.point + rb.velocity.normalized * length;
-            }
-        }
+        //if (coll.gameObject.CompareTag("Boundary"))
+        //{
+        //    RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.right, 100.0f, boundary);
+        //    //print(hit.collider);
+        //    if (hit.collider != null)
+        //    {
+        //        transform.position = hit.point + rb.velocity.normalized * length;
+        //    }
+        //}
         
     }
 
@@ -198,16 +198,16 @@ public class Ship : MonoBehaviour
         //if ((pos.y>Edges.edges.topEdge)|| (pos.y < Edges.edges.botEdge)||
         //        (pos.x > Edges.edges.rightEdge)||(pos.x< Edges.edges.leftEdge))
         //{
-            
+
         //    RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.right, 100.0f, boundary);
         //    print(hit.collider);
         //    if (hit.collider != null)
         //    {
-                
+
         //        transform.position = hit.point+rb.velocity.normalized*length;
         //    }
         //}
-        
+
         //Ray ray=Physics2D.Raycast(transform.position, (Vector2)transform.position + rb.velocity)
 
 
@@ -216,7 +216,7 @@ public class Ship : MonoBehaviour
         //float x=0;
         //float y = Edges.edges.botEdge;
 
-     
+
 
 
         //if (pos.y > Edges.edges.topEdge+offset)
@@ -277,7 +277,17 @@ public class Ship : MonoBehaviour
         //    return;
         //}
 
-     
+        if (pos.y > Edges.edges.topEdge)
+            transform.position = new Vector3(pos.x, Edges.edges.botEdge, pos.z);
+
+        if (pos.y < Edges.edges.botEdge)
+            transform.position = new Vector3(pos.x, Edges.edges.topEdge, pos.z);
+
+        if (pos.x > Edges.edges.rightEdge)
+            transform.position = new Vector3(Edges.edges.leftEdge, pos.y, pos.z);
+
+        if (pos.x < Edges.edges.leftEdge)
+            transform.position = new Vector3(Edges.edges.rightEdge, pos.y, pos.z);
 
 
     }
