@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour {
 
+    
 	public void DestroyShip()
     {
         GameController.gc.ShipReached(false);
-        Destroy(gameObject, 0.5f);
+        Destroy(transform.parent.gameObject, 0.5f);
         
     }
 }
