@@ -300,7 +300,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &290039284
 Prefab:
@@ -557,6 +557,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &355141750 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224166170360679844, guid: 02365c73b9d586d4494ca225aae26304,
+    type: 2}
+  m_PrefabInternal: {fileID: 355141749}
 --- !u!1001 &401346639
 Prefab:
   m_ObjectHideFlags: 0
@@ -1328,11 +1333,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8358fd4897e5c58419c57f66c8d8e7cf, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &1142665611 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224639718708913932, guid: 02365c73b9d586d4494ca225aae26304,
-    type: 2}
-  m_PrefabInternal: {fileID: 355141749}
 --- !u!1001 &1316783353
 Prefab:
   m_ObjectHideFlags: 0
@@ -1376,7 +1376,7 @@ Prefab:
         type: 2}
       propertyPath: leftImg
       value: 
-      objectReference: {fileID: 1142665611}
+      objectReference: {fileID: 355141750}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d929fdce266fef545ba59dc263954626, type: 2}
   m_IsPrefabParent: 0
@@ -1454,7 +1454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1598848479
 GameObject:
@@ -1560,7 +1560,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1870494365
 MonoBehaviour:
@@ -1574,7 +1574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3355a4f3983bf1b48bd78323f05cb268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftImg: {fileID: 1142665611}
+  leftImg: {fileID: 355141750}
 --- !u!1 &2114449657
 GameObject:
   m_ObjectHideFlags: 0
