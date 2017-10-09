@@ -35,9 +35,10 @@ public class Ship : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("DangerZone"))
         {
-            State=ShipState.Dead;
             anim.SetTrigger("Destroy");
-            Destroy(gameObject);
+            State =ShipState.Dead;
+
+            //Destroy(gameObject);
         }
 
         if (coll.gameObject.CompareTag("Port"))

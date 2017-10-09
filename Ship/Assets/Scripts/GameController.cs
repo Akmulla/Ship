@@ -56,4 +56,6 @@ public class GameController : MonoBehaviour
             ScoreManager.sm.Score += price;
         }
     }
+
+  
 }
