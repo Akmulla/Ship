@@ -10,12 +10,14 @@ public class GameController : MonoBehaviour
     float saved_time_scale;
     public GameState State { get; set; }
     public int Lvl { get; set; }
+    
 	
     void Awake()
     {
         gc = GetComponent<GameController>();
         saved_time_scale = 1.0f;
         Lvl = 0;
+       
     }
 
 	void Start ()
