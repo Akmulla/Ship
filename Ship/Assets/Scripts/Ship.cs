@@ -12,10 +12,10 @@ public class Ship : MonoBehaviour
     public float maxRange = 2.0f;
     public float forceCoeff = 1.0f;
     Animator anim;
-    ShipMove shipMove;
+    //ShipMove shipMove;
     public int Price { get; set; }
     public ShipState State { get; set; }
-    public LayerMask mask;
+    //public LayerMask mask;
 
     void Awake()
     {
@@ -27,6 +27,7 @@ public class Ship : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         State = ShipState.Idle;
         rb = GetComponent<Rigidbody2D>();
+        start_position = transform.position;
         Price = 200;
     }
 
@@ -79,7 +80,7 @@ public class Ship : MonoBehaviour
 
         if ((Input.GetMouseButton(0)) && (State == ShipState.Prepare))
         {
-            RotateBackToPoint((mousePosition - start_position).normalized * maxRange * 2.0f);
+            RotateBackToPoint(start_position + (mousePosition - start_position).normalized * maxRange * 2.0f);
             //RotateToPoint((mousePosition - start_position).normalized * maxRange * 2.0f);
             if ((mousePosition - start_position).magnitude < maxRange)
             {
@@ -88,10 +89,10 @@ public class Ship : MonoBehaviour
             }
             else
             {
-                transform.position = (mousePosition - start_position).normalized * maxRange;
-                
+                transform.position = start_position+(mousePosition - start_position).normalized * maxRange;
+               
             }
-
+            //Debug.DrawLine(mousePosition, start_position);
 
         }
 
