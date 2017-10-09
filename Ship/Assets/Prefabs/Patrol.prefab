@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114493238031333142}
   m_Layer: 0
   m_Name: Patrol
-  m_TagString: Untagged
+  m_TagString: DangerZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1719841723994758
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1981748879324752
 GameObject:
   m_ObjectHideFlags: 1
@@ -141,8 +141,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1077623037067142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.52, y: 4.63, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.66, y: 2.63, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4136794809874430}
   - {fileID: 4423576024528560}
@@ -156,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354792295053068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.17, z: 0}
+  m_LocalPosition: {x: -12.72, y: -10.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4423576024528560}
@@ -212,7 +212,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981748879324752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.98, y: 6.37, z: 0}
+  m_LocalPosition: {x: -21.97, y: 3.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4423576024528560}
@@ -277,8 +277,6 @@ MonoBehaviour:
   pointObjs:
   - {fileID: 4983072241251766}
   - {fileID: 4219474452178400}
-  - {fileID: 4808554977514640}
-  - {fileID: 4291813497782952}
   points: []
 --- !u!114 &114610776216053192
 MonoBehaviour:
@@ -293,6 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   path: {fileID: 114493238031333142}
+  circle: 1
 --- !u!212 &212935644557761218
 SpriteRenderer:
   m_ObjectHideFlags: 1
