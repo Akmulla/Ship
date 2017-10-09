@@ -38,8 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FinishedLvls/Lvl_10.unity
     guid: 5fa0d735ab529894881cce8275327e7d
-  - enabled: 1
-    path: Assets/FinishedLvls/Lvl_11.unity
+  - enabled: 0
+    path: Assets/FinishedLvls/Level12.unity
     guid: da466ba3c3c45864eb77cbffcebec980
   - enabled: 1
     path: Assets/FinishedLvls/Lvl_12.unity
