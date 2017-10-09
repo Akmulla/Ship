@@ -38,4 +38,9 @@ public class UIManager : MonoBehaviour
         curLine++;
         dialogText.text = dialogData[GameController.gc.Lvl].lines[curLine];
     }
+
+    void Update()
+    {
+
+    }
 }

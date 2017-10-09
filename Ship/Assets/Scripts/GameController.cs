@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
 	void Start ()
     {
         State = GameState.Game;
+        Spawn.spawn.SpawnShip();
     }
 	
 	

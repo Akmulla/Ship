@@ -7,17 +7,17 @@ public class Spawn : MonoBehaviour
     public static Spawn spawn;
     public Transform spawnSpot;
     public GameObject ship;
-    Vector3 pos;
+    //Vector3 pos;
 
 
     void Awake()
     {
         spawn = this;
-        pos = spawnSpot.position;
+        //pos = spawnSpot.position;
     }
 
     public void SpawnShip()
     {
-        Instantiate(ship, pos, Quaternion.identity);
+        Instantiate(ship, spawnSpot.position, Quaternion.identity);
     }
 }
