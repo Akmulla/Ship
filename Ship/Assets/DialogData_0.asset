@@ -12,9 +12,81 @@ MonoBehaviour:
   m_Name: DialogData_0
   m_EditorClassIdentifier: 
   lines:
-  - captainActive: 1
-    onionActive: 0
-    line: Hello
   - captainActive: 0
     onionActive: 1
-    line: World
+    line: I, King One the 6-th declare vegan`s law at this land. From now on no more
+      meat.
+  - captainActive: 1
+    onionActive: 0
+    line: We have to stop this insane ruler and make this land great again by shipping
+      sausages.
+  - captainActive: 1
+    onionActive: 0
+    line: Drag the ship with your Left mouse button and release. Aim at the port island.
+  - captainActive: 1
+    onionActive: 0
+    line: Guacamole sea has changed its direction, be careful
+  - captainActive: 1
+    onionActive: 0
+    line: You can pass through the other side of the map
+  - captainActive: 0
+    onionActive: 1
+    line: How dare you disobey my order!? There is no place for your filths in my
+      kingdom.
+  - captainActive: 1
+    onionActive: 0
+    line: Filths? It`s 1st class meat , show some respect
+  - captainActive: 1
+    onionActive: 0
+    line: Be aware of whirlpools. Don`t let them suck in your sausage ship.
+  - captainActive: 1
+    onionActive: 0
+    line: Windmills are opposite to whirlpools. Same, but different, but still same.
+  - captainActive: 0
+    onionActive: 1
+    line: You don`t know what you are doing!!! Guards, don`t let him pass!
+  - captainActive: 1
+    onionActive: 0
+    line: "Oh it\u2019s a jellybean island. The ship will recoshet off it."
+  - captainActive: 0
+    onionActive: 1
+    line: This is rediculous! Meat is NOT healty.
+  - captainActive: 1
+    onionActive: 0
+    line: But it tastes damn good!
+  - captainActive: 1
+    onionActive: 0
+    line: Don`t listen to this guy. He doesn`t know what he is talking about. Meat
+      is good.
+  - captainActive: 1
+    onionActive: 0
+    line: A sausage a day keeps a doctor away!
+  - captainActive: 0
+    onionActive: 1
+    line: You just made it up!
+  - captainActive: 1
+    onionActive: 0
+    line: Ehhh... Nope?
+  - captainActive: 0
+    onionActive: 1
+    line: You like to put them in your mouth , don`t you?
+  - captainActive: 1
+    onionActive: 0
+    line: Yes? No homo though
+  - captainActive: 0
+    onionActive: 1
+    line: SUUUURE!
+  - captainActive: 0
+    onionActive: 1
+    line: You know what? Finish it. Everyone died from your meat anyway. I am all
+      alone on this island
+  - captainActive: 1
+    onionActive: 0
+    line: Woops . Who would expect that?
+  - captainActive: 0
+    onionActive: 1
+    line: I !! I WARNED YOU IDIOT!
+  - captainActive: 1
+    onionActive: 0
+    line: Warned me? I just wanted the money. I don`t care about meat anyway. I am
+      vegan too.

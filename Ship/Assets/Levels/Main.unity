@@ -249,6 +249,66 @@ Prefab:
       propertyPath: onion
       value: 
       objectReference: {fileID: 2054264041}
+    - target: {fileID: 1941874050218624, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_FontData.m_RichText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_Text
+      value: "Warned me? just wanted the\n money. I don`t care about meat\n anyway.
+        I am vegan too."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726704268457584, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224522561455655570, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 259
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114139987063825318, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
