@@ -6,7 +6,8 @@ public class Destroy : MonoBehaviour {
 
 	public void DestroyShip()
     {
-        Destroy(gameObject, 0.5f);
         GameController.gc.ShipReached(false);
+        Destroy(gameObject, 0.5f);
+        
     }
 }
