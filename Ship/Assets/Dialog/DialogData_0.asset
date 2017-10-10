@@ -14,12 +14,13 @@ MonoBehaviour:
   lines:
   - captainActive: 0
     onionActive: 1
-    line: I, King One the 6-th declare vegan`s law at this land. From now on no more
-      meat.
+    line: I, King Oni the 6-th declare vegan`s law upon this land. From now on no
+      more meat.
   - captainActive: 1
     onionActive: 0
     line: We have to stop this insane ruler and make this land great again by shipping
       sausages.
   - captainActive: 1
     onionActive: 0
-    line: Drag the ship with your Left mouse button and release. Aim at the port island.
+    line: Drag the ship with your Left mouse button and release it . Aim at the port
+      island.

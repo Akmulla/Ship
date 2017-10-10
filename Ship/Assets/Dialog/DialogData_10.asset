@@ -15,3 +15,9 @@ MonoBehaviour:
   - captainActive: 1
     onionActive: 0
     line: A sausage a day keeps a doctor away!
+  - captainActive: 0
+    onionActive: 1
+    line: You just made it up!
+  - captainActive: 1
+    onionActive: 0
+    line: Ehhh... Nope?

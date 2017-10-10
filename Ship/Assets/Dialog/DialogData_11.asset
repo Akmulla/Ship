@@ -14,7 +14,10 @@ MonoBehaviour:
   lines:
   - captainActive: 0
     onionActive: 1
-    line: You just made it up!
+    line: You like to put them in your mouth , don`t you?
   - captainActive: 1
     onionActive: 0
-    line: Ehhh... Nope?
+    line: Yes? No homo though
+  - captainActive: 0
+    onionActive: 1
+    line: SUUUURE!
