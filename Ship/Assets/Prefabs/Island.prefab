@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 58651783302121790}
   - component: {fileID: 50905446378157934}
   - component: {fileID: 61704737755069180}
+  - component: {fileID: 114102983820402034}
   m_Layer: 0
   m_Name: Island
   m_TagString: Untagged
@@ -132,6 +133,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.814534, y: 11.841862}
   m_EdgeRadius: 0
+--- !u!114 &114102983820402034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659141025936610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c759af25fc2a7409c1f63571957b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212919289837694362
 SpriteRenderer:
   m_ObjectHideFlags: 1

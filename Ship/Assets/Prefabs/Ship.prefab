@@ -177,6 +177,7 @@ MonoBehaviour:
   maxRange: 2
   forceCoeff: 7
   length: 0
+  anchor: {fileID: 1613909818630748, guid: ccc6e30153933964b94d78035e4233d5, type: 2}
   mask:
     serializedVersion: 2
     m_Bits: 512

@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Boundary.cs" />
+    <Compile Include="Assets\Scripts\Bounce.cs" />
     <Compile Include="Assets\Scripts\CursorChange.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\DialogData.cs" />
