@@ -9,7 +9,8 @@ public class ScoreManager : MonoBehaviour
     public Text text;
     public Text sausageText;
     public Text lvlText;
-    
+    public Text weightText;
+    public int weight=100;
     public int startScore;
     int score;
     int sausage=0;
@@ -27,6 +28,8 @@ public class ScoreManager : MonoBehaviour
             SoundManager.sm.SingleSound(SoundSample.Button);
             sausage++;
             Score -= 10;
+            weight = (100 + sausage * 10);
+            weightText.text = weight.ToString();
             sausageText.text = sausage.ToString();
         }
     }
@@ -34,6 +37,8 @@ public class ScoreManager : MonoBehaviour
     public void ResetSausage()
     {
         sausage = 0;
+        weight = (100 + sausage * 10);
+        weightText.text = weight.ToString();
         sausageText.text = sausage.ToString();
     }
     public int GetSausage()

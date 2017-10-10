@@ -225,6 +225,11 @@ Prefab:
       propertyPath: lvlText
       value: 
       objectReference: {fileID: 1344236076}
+    - target: {fileID: 114989184199818786, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: weightText
+      value: 
+      objectReference: {fileID: 184299528}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
   m_IsPrefabParent: 0
@@ -233,6 +238,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1087390131167572, guid: 02365c73b9d586d4494ca225aae26304,
     type: 2}
   m_PrefabInternal: {fileID: 184299526}
+--- !u!114 &184299528 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114057749936591900, guid: 02365c73b9d586d4494ca225aae26304,
+    type: 2}
+  m_PrefabInternal: {fileID: 184299526}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &255293475
 GameObject:
   m_ObjectHideFlags: 0

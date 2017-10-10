@@ -22,7 +22,8 @@ public class Ship : MonoBehaviour
  
     public LayerMask mask;
     public LayerMask boundary;
-    //bool inactive=false;
+    bool inactive=false;
+    public ShipState savedState;
 
     void Awake()
     {
@@ -45,7 +46,7 @@ public class Ship : MonoBehaviour
     void Start ()
     {
         anim = GetComponentInChildren<Animator>();
-        State = ShipState.Idle;
+        State = savedState;
         rb = GetComponent<Rigidbody2D>();
         start_position = transform.position;
         ScoreManager.sm.ResetSausage();
@@ -156,6 +157,7 @@ public class Ship : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && (State == ShipState.Prepare))
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.mass = ScoreManager.sm.weight / 100.0f;
             // rb.simulated = true;
             rb.gravityScale = 1.0f;
             rb.AddForce((start_position - transform.position) * forceCoeff, ForceMode2D.Impulse);
@@ -207,16 +209,17 @@ public class Ship : MonoBehaviour
     void Update()
     {
         Move();
-        //if (inactive)
-        //    return;
+        if (inactive)
+            return;
         float offset = 2.5f;
         Vector3 pos = transform.position;
         Vector3 newPos;
-
+        GameObject obj;
         //if (pos.y > Edges.edges.topEdge)
         //{
         //    newPos = new Vector3(pos.x, Edges.edges.botEdge, pos.z);
-        //    Instantiate(gameObject, newPos, transform.rotation);
+        //    obj=Instantiate(gameObject, newPos, transform.rotation);
+
         //    inactive = true;
         //}
 
@@ -231,8 +234,10 @@ public class Ship : MonoBehaviour
 
         //if (pos.x > Edges.edges.rightEdge)
         //{
-        //    newPos = new Vector3(Edges.edges.leftEdge, pos.y, pos.z);
-        //    Instantiate(gameObject, newPos, transform.rotation);
+        //    savedState = ShipState.Sail;
+        //    newPos = new Vector3(Edges.edges.leftEdge+0.1f, pos.y, pos.z);
+        //    obj=Instantiate(gameObject, newPos, transform.rotation);
+
         //    inactive = true;
         //}
 
@@ -260,6 +265,10 @@ public class Ship : MonoBehaviour
 
         if (pos.x < Edges.edges.leftEdge)
             transform.position = new Vector3(Edges.edges.rightEdge, pos.y, pos.z);
+
+
+
+
 
         //if ((pos.y>Edges.edges.topEdge)|| (pos.y < Edges.edges.botEdge)||
         //        (pos.x > Edges.edges.rightEdge)||(pos.x< Edges.edges.leftEdge))

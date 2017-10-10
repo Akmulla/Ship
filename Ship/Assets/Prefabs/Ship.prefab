@@ -184,6 +184,7 @@ MonoBehaviour:
   boundary:
     serializedVersion: 2
     m_Bits: 1024
+  savedState: 0
 --- !u!212 &212460928170445516
 SpriteRenderer:
   m_ObjectHideFlags: 1
