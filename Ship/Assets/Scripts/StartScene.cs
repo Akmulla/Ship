@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class StartScene : MonoBehaviour
 {
-
+    bool started=false;
+    AsyncOperation loading;
 	// Use this for initialization
 	void Start ()
     {
@@ -18,6 +19,17 @@ public class StartScene : MonoBehaviour
 	
 	public void BeginGame()
     {
-        SceneManager.LoadScene("Lvl_0");
+        started = true;
+        loading=SceneManager.LoadSceneAsync("Lvl_0");
+        loading.allowSceneActivation = false;
+    }
+
+    void Update()
+    {
+        if (!started)
+            return;
+
+        if (loading.progress > 0.89f)
+            loading.allowSceneActivation = true;
     }
 }
