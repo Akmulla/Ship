@@ -83,7 +83,7 @@ public class GameController : MonoBehaviour
                 ///////////////
                 if (Input.GetKeyDown(KeyCode.End))
                 {
-                   // NextLvl();
+                   NextLvl();
                 }
                 /////////////////
                 break;
