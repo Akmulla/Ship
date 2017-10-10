@@ -14,7 +14,7 @@ MonoBehaviour:
   lines:
   - captainActive: 0
     onionActive: 1
-    line: This is ridiculous! Meat is NOT healty.
+    line: This is ridiculous! Meat is NOT healthy.
   - captainActive: 1
     onionActive: 0
     line: But it tastes damn good!

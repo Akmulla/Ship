@@ -211,10 +211,10 @@ public class Ship : MonoBehaviour
         Move();
         //if (inactive)
         //    return;
-        float offset = 2.5f;
+        //float offset = 2.5f;
         Vector3 pos = transform.position;
-        Vector3 newPos;
-        GameObject obj;
+        //Vector3 newPos;
+        //GameObject obj;
         //if (pos.y > Edges.edges.topEdge)
         //{
         //    newPos = new Vector3(pos.x, Edges.edges.botEdge, pos.z);
