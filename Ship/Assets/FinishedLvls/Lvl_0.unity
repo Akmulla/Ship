@@ -221,6 +221,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1870494363}
+    - target: {fileID: 114354434249209888, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2043544134}
+    - target: {fileID: 114354434249209888, guid: 02365c73b9d586d4494ca225aae26304,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddSausage
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114989184199818786, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
