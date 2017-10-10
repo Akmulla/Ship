@@ -20,4 +20,9 @@ public class Spawn : MonoBehaviour
     {
         Instantiate(ship, spawnSpot.position, Quaternion.identity);
     }
+
+    public void SpawnShip(Vector3 pos,Quaternion rotation)
+    {
+        Instantiate(ship, pos, rotation);
+    }
 }

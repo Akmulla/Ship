@@ -22,9 +22,11 @@ public class Ship : MonoBehaviour
  
     public LayerMask mask;
     public LayerMask boundary;
+    //bool inactive=false;
 
     void Awake()
     {
+        //inactive = false ;
         ship = this;
         length = GetComponentInChildren<SpriteRenderer>().sprite.bounds.size.y*transform.localScale.x;
     }
@@ -52,6 +54,8 @@ public class Ship : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
+        //if (inactive)
+        //    return;
         if (coll.gameObject.CompareTag("DangerZone"))
         {
             //if (State != ShipState.Dead)
@@ -67,6 +71,7 @@ public class Ship : MonoBehaviour
         if (coll.gameObject.CompareTag("Port"))
         {
             GameController.gc.ShipReached(true, Price);
+            Port.port.Delivery();
             Destroy(gameObject);
         }
         //if (coll.gameObject.CompareTag("Boundary"))
@@ -202,9 +207,59 @@ public class Ship : MonoBehaviour
     void Update()
     {
         Move();
+        //if (inactive)
+        //    return;
         float offset = 2.5f;
         Vector3 pos = transform.position;
+        Vector3 newPos;
 
+        //if (pos.y > Edges.edges.topEdge)
+        //{
+        //    newPos = new Vector3(pos.x, Edges.edges.botEdge, pos.z);
+        //    Instantiate(gameObject, newPos, transform.rotation);
+        //    inactive = true;
+        //}
+
+
+        //if (pos.y < Edges.edges.botEdge)
+        //{
+        //    newPos = new Vector3(pos.x, Edges.edges.topEdge, pos.z);
+        //    Instantiate(gameObject, newPos, transform.rotation);
+        //    inactive = true;
+        //}
+
+
+        //if (pos.x > Edges.edges.rightEdge)
+        //{
+        //    newPos = new Vector3(Edges.edges.leftEdge, pos.y, pos.z);
+        //    Instantiate(gameObject, newPos, transform.rotation);
+        //    inactive = true;
+        //}
+
+
+        //if (pos.x < Edges.edges.leftEdge)
+        //{
+        //    newPos = new Vector3(Edges.edges.rightEdge, pos.y, pos.z);
+        //    Instantiate(gameObject, newPos, transform.rotation);
+        //    inactive = true;
+        //}
+
+
+
+
+
+
+        if (pos.y > Edges.edges.topEdge)
+            transform.position = new Vector3(pos.x, Edges.edges.botEdge, pos.z);
+
+        if (pos.y < Edges.edges.botEdge)
+            transform.position = new Vector3(pos.x, Edges.edges.topEdge, pos.z);
+
+        if (pos.x > Edges.edges.rightEdge)
+            transform.position = new Vector3(Edges.edges.leftEdge, pos.y, pos.z);
+
+        if (pos.x < Edges.edges.leftEdge)
+            transform.position = new Vector3(Edges.edges.rightEdge, pos.y, pos.z);
 
         //if ((pos.y>Edges.edges.topEdge)|| (pos.y < Edges.edges.botEdge)||
         //        (pos.x > Edges.edges.rightEdge)||(pos.x< Edges.edges.leftEdge))
@@ -288,17 +343,7 @@ public class Ship : MonoBehaviour
         //    return;
         //}
 
-        if (pos.y > Edges.edges.topEdge)
-            transform.position = new Vector3(pos.x, Edges.edges.botEdge, pos.z);
 
-        if (pos.y < Edges.edges.botEdge)
-            transform.position = new Vector3(pos.x, Edges.edges.topEdge, pos.z);
-
-        if (pos.x > Edges.edges.rightEdge)
-            transform.position = new Vector3(Edges.edges.leftEdge, pos.y, pos.z);
-
-        if (pos.x < Edges.edges.leftEdge)
-            transform.position = new Vector3(Edges.edges.rightEdge, pos.y, pos.z);
 
 
     }

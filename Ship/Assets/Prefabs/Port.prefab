@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4975368081753832}
   - component: {fileID: 61901059811064722}
+  - component: {fileID: 114614878973029580}
   m_Layer: 0
   m_Name: Port
   m_TagString: Port
@@ -59,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4279683685787000
 Transform:
   m_ObjectHideFlags: 1
@@ -126,6 +127,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.92, y: 7.05}
   m_EdgeRadius: 0
+--- !u!114 &114614878973029580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682788451105908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc88a7372720d044b031aef8f6ea4a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 1928585418768346}
 --- !u!198 &198336292990871216
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -137,7 +150,7 @@ ParticleSystem:
   simulationSpeed: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
