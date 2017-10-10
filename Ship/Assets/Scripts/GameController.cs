@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public static GameController gc;
     float saved_time_scale;
     public GameState State { get; set; }
-    int lvl;
+    int lvl=0;
     // public DialogData[] dialogData;
     bool delay=false;
 

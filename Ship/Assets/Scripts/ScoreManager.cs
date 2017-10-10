@@ -16,6 +16,8 @@ public class ScoreManager : MonoBehaviour
     
     public void UpdateLvlText(int lvl)
     {
+        //print(lvlText);
+        //print(lvl);
         lvlText.text = lvl.ToString();
     }
     public void AddSausage()

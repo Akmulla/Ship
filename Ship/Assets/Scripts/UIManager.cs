@@ -66,8 +66,5 @@ public class UIManager : MonoBehaviour
         onion.SetActive(data.lines[curLine].onionActive);
     }
 
-    void Update()
-    {
-
-    }
+   
 }

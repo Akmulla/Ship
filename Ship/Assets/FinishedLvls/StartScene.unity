@@ -108,6 +108,68 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &18610392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 18610395}
+  - component: {fileID: 18610394}
+  - component: {fileID: 18610393}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &18610393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18610392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &18610394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18610392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &18610395
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18610392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &121050510
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,8 +481,6 @@ GameObject:
   - component: {fileID: 1513596812}
   - component: {fileID: 1513596811}
   - component: {fileID: 1513596810}
-  - component: {fileID: 1513596809}
-  - component: {fileID: 1513596808}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -428,55 +488,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1513596808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114989184199818786, guid: 02365c73b9d586d4494ca225aae26304,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1513596807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ab53ee1fe7f4ca418985462fac6cdba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
-  sausageText: {fileID: 0}
-  lvlText: {fileID: 0}
-  startScore: 1500
---- !u!114 &1513596809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114085308344576496, guid: 02365c73b9d586d4494ca225aae26304,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1513596807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df594fd181db8c44a7adde514de3e4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogMenu: {fileID: 0}
-  dialogText: {fileID: 0}
-  dialogData:
-  - {fileID: 11400000, guid: 759a01ae52b1c2b499ec4e87e34fe631, type: 2}
-  - {fileID: 11400000, guid: 255fc35fc3f11d7409df2cd01e3160b6, type: 2}
-  - {fileID: 11400000, guid: 684084f102389124caf411ee0c16fc27, type: 2}
-  - {fileID: 11400000, guid: ae1590cff68884745b7c08af98281482, type: 2}
-  - {fileID: 11400000, guid: 6e82f365c1e9009429a3d206cb3aee42, type: 2}
-  - {fileID: 11400000, guid: aafd3ebe5078d1247ad24671800ea8d0, type: 2}
-  - {fileID: 11400000, guid: ed157bbbc795acc4192910349bdf731d, type: 2}
-  - {fileID: 11400000, guid: 882affeb43f2814478cda92fdf791675, type: 2}
-  - {fileID: 11400000, guid: 73f9ac9c76ffe8241b359e9fbb0fdb10, type: 2}
-  - {fileID: 11400000, guid: 54b8d101a55120d4eb1038fc31137a00, type: 2}
-  - {fileID: 11400000, guid: eb038e9bd5f0c944daafc5182900d95a, type: 2}
-  - {fileID: 11400000, guid: 7871ceefd068d09438e299de500f0d1c, type: 2}
-  - {fileID: 11400000, guid: 14158d1d66d4b04459905283a34d5b13, type: 2}
-  - {fileID: 11400000, guid: 0a7b683026f1a1d4d863f9b9fb7bca2e, type: 2}
-  - {fileID: 11400000, guid: 448e67b51f720d946b5a7c4cf492883f, type: 2}
-  captain: {fileID: 0}
-  onion: {fileID: 0}
-  gameOverMenu: {fileID: 0}
 --- !u!114 &1513596810
 MonoBehaviour:
   m_ObjectHideFlags: 0
