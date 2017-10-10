@@ -15,6 +15,7 @@ public class Ship : MonoBehaviour
     public float length;
     //ShipMove shipMove;
     bool prepared = false;
+    public GameObject anchor;
 
     int price;
     public ShipState State { get; set; }
@@ -117,6 +118,7 @@ public class Ship : MonoBehaviour
                     State = ShipState.Prepare;
                     rb.bodyType = RigidbodyType2D.Kinematic;
                     SoundManager.sm.SingleSound(SoundSample.ShipPicked);
+                    Instantiate(anchor, start_position, Quaternion.identity);
                     return;
                 }
 

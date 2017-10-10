@@ -46,6 +46,8 @@ public class UIManager : MonoBehaviour
     {
         if (GameController.gc.State != GameState.Dialog)
             return true;
+
+        SoundManager.sm.SingleSound(SoundSample.Button);
         curLine++;
         if (curLine == dialogData[GameController.gc.Lvl].lines.Length )
         {
