@@ -6,9 +6,13 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager sm;
+    [SerializeField]
     public Text text;
+    [SerializeField]
     public Text sausageText;
+    [SerializeField]
     public Text lvlText;
+    [SerializeField]
     public Text weightText;
     public int weight=100;
     public int startScore;
@@ -36,6 +40,8 @@ public class ScoreManager : MonoBehaviour
 
     public void ResetSausage()
     {
+        //if ((sausageText == null) || (weightText == null))
+        //    return;
         sausage = 0;
         weight = (100 + sausage * 10);
         weightText.text = weight.ToString();

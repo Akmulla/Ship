@@ -22,7 +22,7 @@ public class Ship : MonoBehaviour
  
     public LayerMask mask;
     public LayerMask boundary;
-    bool inactive=false;
+    //bool inactive=false;
     public ShipState savedState;
 
     void Awake()
@@ -209,8 +209,8 @@ public class Ship : MonoBehaviour
     void Update()
     {
         Move();
-        if (inactive)
-            return;
+        //if (inactive)
+        //    return;
         float offset = 2.5f;
         Vector3 pos = transform.position;
         Vector3 newPos;

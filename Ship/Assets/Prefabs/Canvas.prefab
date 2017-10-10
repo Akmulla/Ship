@@ -779,7 +779,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: X45
+  m_Text: 0
 --- !u!114 &114057621311410002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -931,7 +931,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 448e67b51f720d946b5a7c4cf492883f, type: 2}
   captain: {fileID: 1786799015207080}
   onion: {fileID: 1689988572257158}
-  gameOverMenu: {fileID: 0}
+  gameOverMenu: {fileID: 1087390131167572}
 --- !u!114 &114122414726440376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1328,6 +1328,8 @@ MonoBehaviour:
   text: {fileID: 114030457472400306}
   sausageText: {fileID: 0}
   lvlText: {fileID: 0}
+  weightText: {fileID: 0}
+  weight: 100
   startScore: 1500
 --- !u!114 &114550982051740544
 MonoBehaviour:
@@ -1818,6 +1820,8 @@ MonoBehaviour:
   text: {fileID: 114745495251322542}
   sausageText: {fileID: 114648859524129178}
   lvlText: {fileID: 114030457472400306}
+  weightText: {fileID: 114057749936591900}
+  weight: 100
   startScore: 1500
 --- !u!114 &114995781272694266
 MonoBehaviour:

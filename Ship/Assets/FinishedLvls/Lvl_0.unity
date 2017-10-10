@@ -108,6 +108,12 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &146940199 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114648859524129178, guid: 02365c73b9d586d4494ca225aae26304,
+    type: 2}
+  m_PrefabInternal: {fileID: 184299526}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &184299526
 Prefab:
   m_ObjectHideFlags: 0
@@ -205,39 +211,20 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114550982051740544, guid: 02365c73b9d586d4494ca225aae26304,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1870494363}
     - target: {fileID: 114733930008849362, guid: 02365c73b9d586d4494ca225aae26304,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1870494363}
-    - target: {fileID: 114085308344576496, guid: 02365c73b9d586d4494ca225aae26304,
+    - target: {fileID: 114550982051740544, guid: 02365c73b9d586d4494ca225aae26304,
         type: 2}
-      propertyPath: gameOverMenu
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 184299527}
-    - target: {fileID: 114989184199818786, guid: 02365c73b9d586d4494ca225aae26304,
-        type: 2}
-      propertyPath: lvlText
-      value: 
-      objectReference: {fileID: 1344236076}
-    - target: {fileID: 114989184199818786, guid: 02365c73b9d586d4494ca225aae26304,
-        type: 2}
-      propertyPath: weightText
-      value: 
-      objectReference: {fileID: 184299528}
-    m_RemovedComponents: []
+      objectReference: {fileID: 1870494363}
+    m_RemovedComponents:
+    - {fileID: 114989184199818786, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 02365c73b9d586d4494ca225aae26304, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &184299527 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1087390131167572, guid: 02365c73b9d586d4494ca225aae26304,
-    type: 2}
-  m_PrefabInternal: {fileID: 184299526}
 --- !u!114 &184299528 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114057749936591900, guid: 02365c73b9d586d4494ca225aae26304,
@@ -1019,6 +1006,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 184299526}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1429850350 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114745495251322542, guid: 02365c73b9d586d4494ca225aae26304,
+    type: 2}
+  m_PrefabInternal: {fileID: 184299526}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1555186248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,6 +1432,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 25.86}
   m_EdgeRadius: 0
+--- !u!1 &2043544133 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1551439377534636, guid: 02365c73b9d586d4494ca225aae26304,
+    type: 2}
+  m_PrefabInternal: {fileID: 184299526}
+--- !u!114 &2043544134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043544133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab53ee1fe7f4ca418985462fac6cdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1429850350}
+  sausageText: {fileID: 146940199}
+  lvlText: {fileID: 1344236076}
+  weightText: {fileID: 184299528}
+  weight: 100
+  startScore: 1500
 --- !u!1 &2076511417
 GameObject:
   m_ObjectHideFlags: 0
