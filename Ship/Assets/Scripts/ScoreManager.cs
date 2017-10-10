@@ -48,9 +48,14 @@ public class ScoreManager : MonoBehaviour
         {
             if (value<0)
             {
-
+                score = 0;
+                GameController.gc.GameOver();
             }
-            score = value;
+            else
+            {
+                score = value;
+            }
+            
             text.text = score.ToString();
         }
     }

@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     int curLine;
     public GameObject captain;
     public GameObject onion;
+    public GameObject gameOverMenu;
     DialogData data;
 
     void Awake ()
@@ -33,6 +34,10 @@ public class UIManager : MonoBehaviour
                 curLine = 0;
                 data = dialogData[GameController.gc.Lvl];
                 UpdateLine();
+                break;
+            case GameState.GameOver:
+                dialogMenu.SetActive(false);
+                gameOverMenu.SetActive(true);
                 break;
         }
     }

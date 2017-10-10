@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum GameState { Game,Dialog};
+public enum GameState { Game,Dialog,GameOver};
 
 public class GameController : MonoBehaviour
 {
@@ -14,6 +14,19 @@ public class GameController : MonoBehaviour
     // public DialogData[] dialogData;
     bool delay=false;
 
+    public void GameOver()
+    {
+        State = GameState.GameOver;
+        UIManager.ui.UpdateUI(State);
+    }
+    public void ReloadGame()
+    {
+        SceneManager.LoadSceneAsync("StartScene");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
     IEnumerator DelayInput()
     {
         delay = true;
@@ -36,7 +49,10 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        gc = GetComponent<GameController>();
+        //if (gc != null)
+        //    Destroy(gc.gameObject);
+        
+           gc = GetComponent<GameController>();
         saved_time_scale = 1.0f;
         DontDestroyOnLoad(gameObject);
         
@@ -67,7 +83,7 @@ public class GameController : MonoBehaviour
                 ///////////////
                 if (Input.GetKeyDown(KeyCode.End))
                 {
-                    NextLvl();
+                   // NextLvl();
                 }
                 /////////////////
                 break;
@@ -75,7 +91,7 @@ public class GameController : MonoBehaviour
             case GameState.Dialog:
                 if ((!delay)&&(Input.GetKeyDown(KeyCode.Space)))
                 {
-                    StartCoroutine(DelayInput());
+                    //StartCoroutine(DelayInput());
                     if (UIManager.ui.NextLine())
                     {
                         State = GameState.Game;
