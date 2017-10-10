@@ -240,6 +240,21 @@ Prefab:
       propertyPath: m_Name
       value: WhirlPool
       objectReference: {fileID: 0}
+    - target: {fileID: 250878988825490896, guid: 54881c7522c570241a53f2b04d1ad7d9,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250878988825490896, guid: 54881c7522c570241a53f2b04d1ad7d9,
+        type: 2}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 250878988825490896, guid: 54881c7522c570241a53f2b04d1ad7d9,
+        type: 2}
+      propertyPath: m_ForceMagnitude
+      value: -30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54881c7522c570241a53f2b04d1ad7d9, type: 2}
   m_IsPrefabParent: 0
@@ -367,7 +382,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 740340474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.36, y: -5.44, z: 0}
+  m_LocalPosition: {x: 11.92, y: 4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2114449658}
@@ -672,6 +687,21 @@ Prefab:
       propertyPath: m_Name
       value: WhirlPool (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 250878988825490896, guid: 54881c7522c570241a53f2b04d1ad7d9,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250878988825490896, guid: 54881c7522c570241a53f2b04d1ad7d9,
+        type: 2}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 250878988825490896, guid: 54881c7522c570241a53f2b04d1ad7d9,
+        type: 2}
+      propertyPath: m_ForceMagnitude
+      value: -30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54881c7522c570241a53f2b04d1ad7d9, type: 2}
   m_IsPrefabParent: 0
@@ -897,6 +927,21 @@ Prefab:
       propertyPath: m_Name
       value: WhirlPool (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 250878988825490896, guid: 54881c7522c570241a53f2b04d1ad7d9,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250878988825490896, guid: 54881c7522c570241a53f2b04d1ad7d9,
+        type: 2}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 250878988825490896, guid: 54881c7522c570241a53f2b04d1ad7d9,
+        type: 2}
+      propertyPath: m_ForceMagnitude
+      value: -30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54881c7522c570241a53f2b04d1ad7d9, type: 2}
   m_IsPrefabParent: 0
@@ -922,7 +967,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2114449657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.36, y: -5.44, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 740340476}
