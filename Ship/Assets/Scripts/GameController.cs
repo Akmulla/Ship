@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     {
         State = GameState.GameOver;
         UIManager.ui.UpdateUI(State);
+        SoundManager.sm.SingleSound(SoundSample.GameOver);
     }
     public void ReloadGame()
     {
@@ -25,6 +26,7 @@ public class GameController : MonoBehaviour
     }
     public void QuitGame()
     {
+        SoundManager.sm.SingleSound(SoundSample.Button);
         Application.Quit();
     }
     IEnumerator DelayInput()
@@ -125,6 +127,7 @@ public class GameController : MonoBehaviour
         
         if (success)
         {
+
             ScoreManager.sm.Score += price;
             NextLvl();
         }
@@ -143,6 +146,8 @@ public class GameController : MonoBehaviour
     }
   IEnumerator changeLvl()
     {
+        SoundManager.sm.SingleSound(SoundSample.Delivery);
+        yield return new WaitForSeconds(1.0f);
         AsyncOperation load= SceneManager.LoadSceneAsync("Lvl_" + Lvl.ToString());
         while (!load.isDone)
         {

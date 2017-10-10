@@ -14,6 +14,7 @@ public class Ship : MonoBehaviour
     Animator anim;
     public float length;
     //ShipMove shipMove;
+    bool prepared = false;
 
     int price;
     public ShipState State { get; set; }
@@ -37,7 +38,7 @@ public class Ship : MonoBehaviour
             price = value;
         }
     }
-
+    
     void Start ()
     {
         anim = GetComponentInChildren<Animator>();
@@ -101,6 +102,7 @@ public class Ship : MonoBehaviour
         {
             // rb.simulated = false;
             rb.gravityScale = 0.0f;
+           // return;
         }
         if ((Input.GetMouseButtonDown(0)) && (State == ShipState.Idle))
         {
@@ -114,6 +116,8 @@ public class Ship : MonoBehaviour
                 {
                     State = ShipState.Prepare;
                     rb.bodyType = RigidbodyType2D.Kinematic;
+                    SoundManager.sm.SingleSound(SoundSample.ShipPicked);
+                    return;
                 }
 
             }
@@ -131,7 +135,12 @@ public class Ship : MonoBehaviour
             else
             {
                 transform.position = start_position+(mousePosition - start_position).normalized * maxRange;
-               
+                if(!prepared)
+                {
+                    SoundManager.sm.SingleSound(SoundSample.Prepare);
+                    prepared = true;
+                }
+                
             }
             //Debug.DrawLine(mousePosition, start_position);
 
@@ -145,7 +154,7 @@ public class Ship : MonoBehaviour
             rb.AddForce((start_position - transform.position) * forceCoeff, ForceMode2D.Impulse);
             State = ShipState.Sail;
             StartCoroutine(DestroyDelay());
-            
+            SoundManager.sm.SingleSound(SoundSample.StartShip);
         }
 
         //if (State == ShipState.Sail)

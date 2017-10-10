@@ -11,4 +11,9 @@ public class Destroy : MonoBehaviour {
         Destroy(transform.parent.gameObject);
         
     }
+
+    public void PlaySound()
+    {
+        SoundManager.sm.SingleSound(SoundSample.Explosion);
+    }
 }

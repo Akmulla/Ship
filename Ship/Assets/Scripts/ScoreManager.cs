@@ -24,6 +24,7 @@ public class ScoreManager : MonoBehaviour
     {
         if ((Ship.ship != null) && (sausage < 5) && (Score >= 10)&&(Ship.ship.State==ShipState.Idle))
         {
+            SoundManager.sm.SingleSound(SoundSample.Button);
             sausage++;
             Score -= 10;
             sausageText.text = sausage.ToString();

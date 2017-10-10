@@ -19,6 +19,8 @@ public class StartScene : MonoBehaviour
 	
 	public void BeginGame()
     {
+        if(!started)
+            SoundManager.sm.SingleSound(SoundSample.Button);
         started = true;
         loading=SceneManager.LoadSceneAsync("Lvl_0");
         loading.allowSceneActivation = false;
